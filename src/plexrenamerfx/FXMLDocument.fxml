@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" onMouseDragged="#dragWindowAction" onMousePressed="#setOffsetsAction" prefHeight="433.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="plexrenamerfx.FXMLDocumentController">
+    <children>
+      <TabPane id="tabs" prefHeight="433.0" prefWidth="279.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Rename Season">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="358.0" prefWidth="474.0">
+                     <children>
+                          <Button fx:id="button" layoutX="15.0" layoutY="94.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="244.0" styleClass="plexButton" text="Choose Folder" />
+                        <Label fx:id="label1" layoutX="19.0" layoutY="186.0" minHeight="16" minWidth="50.0" prefHeight="25.0" prefWidth="50.0" text="Season: " />
+                        <TextField fx:id="seasonText" layoutX="69.0" layoutY="183.0" prefHeight="25.0" prefWidth="187.0" styleClass="textBox" />
+                        <TextField fx:id="seriesText" layoutX="69.0" layoutY="154.0" prefHeight="25.0" prefWidth="187.0" styleClass="textBox" />
+                        <Label fx:id="label11" layoutX="19.0" layoutY="154.0" minHeight="16" minWidth="50.0" prefHeight="25.0" prefWidth="50.0" text="Series: " />
+                        <Button fx:id="button1" layoutX="15.0" layoutY="214.0" onAction="#renameFilesAction" prefHeight="25.0" prefWidth="244.0" styleClass="plexButton" text="Rename Season" />
+                          <Label fx:id="dirLabel" layoutX="18.0" layoutY="119.0" minHeight="16" minWidth="69" prefHeight="17.0" prefWidth="244.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Rename Whole Series">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="dirLabelSeries" layoutX="18.0" layoutY="125.0" minHeight="16" minWidth="69" prefHeight="17.0" prefWidth="244.0" />
+                        <Button fx:id="button11" layoutX="18.0" layoutY="206.0" onAction="#renameSeriesAction" prefHeight="25.0" prefWidth="244.0" styleClass="plexButton" text="Rename Series" />
+                        <Label fx:id="label111" layoutX="18.0" layoutY="163.0" minHeight="16" minWidth="50.0" prefHeight="25.0" prefWidth="50.0" text="Series: " />
+                        <TextField fx:id="seriesText2" layoutX="71.0" layoutY="163.0" prefHeight="25.0" prefWidth="187.0" styleClass="textBox" />
+                        <Button fx:id="button2" layoutX="18.0" layoutY="100.0" onAction="#renameSeriesChooseFolder" prefHeight="25.0" prefWidth="244.0" styleClass="plexButton" text="Choose Folder" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="closeButton" layoutX="792.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeWindowAction" prefHeight="25.0" prefWidth="23.0" styleClass="toolbar" text="X" />
+      <Button layoutX="768.0" layoutY="14.0" mnemonicParsing="false" onAction="#minimizeWindowAction" prefHeight="25.0" prefWidth="23.0" styleClass="toolbar" text="_" />
+      <TextArea id="logText" fx:id="logText" editable="false" layoutX="312.0" layoutY="49.0" prefHeight="299.0" prefWidth="510.0" />
+      <ProgressBar id="progressBar" fx:id="progressBar" layoutX="310.0" layoutY="373.0" prefHeight="18.0" prefWidth="510.0" progress="0.0" />
+    </children>
+</AnchorPane>
